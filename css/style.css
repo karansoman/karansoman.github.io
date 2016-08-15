@@ -78,6 +78,7 @@ p {
 	padding: 10px;
 }
 
+/*Talk to the iframe tag that is inserted in the HTML by the .js*/
 iframe {
 	margin-left: -110px;
 }

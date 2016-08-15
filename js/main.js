@@ -49,9 +49,9 @@
 		$("a").click(function(e){
 			
 			e.preventDefault();
-			var paragraph = $(this).parent();
-			var article = paragraph.parent().parent().parent();
-			var container = article.parent();
+			// var paragraph = $(this).parent();
+			// var article = paragraph.parent().parent().parent();
+			// var container = article.parent();
 			
 			// every time a is clicked make sure that the parents 
 			// / link - paragraph - article - container - what 
