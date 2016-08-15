@@ -2,7 +2,7 @@
 // https://learn.jquery.com/using-jquery-core/document-ready/
 // https://remysharp.com/2007/04/12/jquerys-this-demystified
 	
-alert("Two brothers had an idea for a story. One brother turned it into the most original movie of the spring, Memento. The other wrote this short story. I made hyperlinks.");
+alert("Two brothers had an idea for a story. One brother turned it into the most original movie ever, Memento. The other wrote this short story. I made hyperlinks.");
 	$(document).ready(function(){	
 
 // Text Color and Background Color keep inter-changing (Black&White)
