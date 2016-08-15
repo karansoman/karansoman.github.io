@@ -2,27 +2,15 @@ body {
 	background: #f6f6f6;
 	margin: 0;
 	padding: 0;
+	/*The overflow-x property specifies what to 
+	do with the left/right edges of the content - 
+	if it overflows the element's content area*/
 	overflow-x: hidden;
 }
-
-/*@font-face {
-    font-family: 'eliemedium';
-    src: url('elie-webfont.eot');
-    src: url('elie-webfont.eot?#iefix') format('embedded-opentype'),
-         url('elie-webfont.woff2') format('woff2'),
-         url('elie-webfont.woff') format('woff'),
-         url('elie-webfont.ttf') format('truetype'),
-         url('elie-webfont.svg#eliemedium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}*/
-/*any time we add a border or a padding = 
-make sure it is inside the element
-border and the padding of the element 
-should be contained by the width of the element 
-and not add on to it*/
 * { 
+	/*The width and height properties 
+	(and min/max properties) includes content, 
+	padding and border, but not the margin*/
 	-moz-box-sizing: border-box; 
 	-webkit-box-sizing: border-box; 
 	box-sizing: border-box; 
@@ -31,6 +19,9 @@ and not add on to it*/
 .container {
 	width: 100%;
 	height: auto;
+	/*The element is positioned relative to 
+	its normal position, so "left:20px" adds 
+	20 pixels to the element's LEFT position*/
 	position: relative;
 	margin: 0 auto;
 	background: none;
@@ -39,7 +30,6 @@ and not add on to it*/
 	width: 100%;
 	height: auto;
 	position: relative;
-
 	padding-top: 50px;
 	margin-left: 100px;
 }
@@ -49,9 +39,6 @@ article {
 	margin-left: 10px;
 }
 
-.selfOne {
-
-}
 
 p {
 	font-family: 'Inconsolata', ;
@@ -72,7 +59,7 @@ p {
 
 .allCaps {
 	text-transform: capitalize;
-	font-family: 'helvetica';
+	font-family: 'Permanent Marker', cursive;
 	font-size: 35px;
 	letter-spacing: 0.8px;
 	font-weight: bold;
@@ -95,6 +82,7 @@ iframe {
 	margin-left: -110px;
 }
 
+/*Red Circle denoting jumps in the story */
 .circle {
 	width: 20px;
 	height: 20px;
