@@ -1,6 +1,8 @@
 	
 // https://learn.jquery.com/using-jquery-core/document-ready/
 // https://remysharp.com/2007/04/12/jquerys-this-demystified
+	
+alert("Memento through Hyperlinks");
 	$(document).ready(function(){	
 
 // Text Color and Background Color keep inter-changing (Black&White)
