@@ -15,7 +15,6 @@ body {
 	-webkit-box-sizing: border-box; 
 	box-sizing: border-box; 
 }
-
 .container {
 	width: 100%;
 	height: auto;
@@ -33,30 +32,29 @@ body {
 	padding-top: 50px;
 	margin-left: 100px;
 }
-
 article {
 	width: 50%;
 	margin-left: 10px;
 }
-
-
 p {
 	font-family: 'Inconsolata', ;
 	font-size: 1.1em;
 	line-height: 3;
 	margin-top: 30px;
 }
-
+/*Self Text is in First Person
+with a Black Background (.js)in White Text */
 .selfText {
 	font-family: 'Inconsolata', serif;
 	color: #f6f6f6;
 }
-
+/*Story Text is in Third Person
+with a White Background (.js) and Black text*/
 .storyText {
 	font-family: 'Vollkorn', serif;
 	color: #1c1c1c;
 }
-
+/*Tatoos on his body are in Permanent Market*/
 .allCaps {
 	text-transform: capitalize;
 	font-family: 'Permanent Marker', cursive;
@@ -73,6 +71,8 @@ p {
 }
 
 .storyText a {
+	/*The inherit keyword specifies that a property 
+	should inherit its value from its parent element.*/
 	color: inherit;
 	text-decoration: none;
 	padding: 10px;

@@ -1,77 +1,65 @@
 	
 // https://learn.jquery.com/using-jquery-core/document-ready/
-	$(document).ready(function(){
+// https://remysharp.com/2007/04/12/jquerys-this-demystified
+	$(document).ready(function(){	
 
-
-	
-// backgrounds keep changing - depending on 
-// the background color we need to see the text 
-		//All the links in self text will have the below style 
+// Text Color and Background Color keep inter-changing (Black&White)
+		//Style for Links inside Selftext (First Person)
 		$(".selfText a").css("border","1px solid #f6f6f6");
 		$(".selfText a").hover(function(){
-			// https://remysharp.com/2007/04/12/jquerys-this-demystified
+			// Hovering makes the background white; text black
 			$(this).css("background","#f6f6f6");
 			$(this).css("color","#1c1c1c");
-			// the below is the call back function 
-			// hover off function - remove the background 
-			// property all the way completely, 
-			// telling it to default 
+			// Call Back function; hover off - reversal 
 		}, function() {
 			$(this).css("background","#1c1c1c");
 			$(this).css("color","#f6f6f6");
 		});
-		// All the links in the story text will have the below style
-		$(".storyText a").css("border","2px solid #1c1c1c");
 
+		// Style for Links inside Storytext (Third Person)
+		$(".storyText a").css("border","2px solid #1c1c1c");
 		$(".storyText a").hover(function(){
+			// Hovering makes the background black; text white
 			$(this).css("background","#1c1c1c");
 			$(this).css("color","#f6f6f6");
+			// Call Back function; hover off - reversal 
 		}, function(){
 			$(this).css("background","#f6f6f6");
 			$(this).css("color","1c1c1c");
-		});
-		
-// Container - if the word earl exists inside you then take this  
-// Whenever EARL is there you know it is a third person voice - story text - white background black text 
-// whenever the page has you in it its selftext - first person text - black bkgrnd white text 
+		});	
+
+// Container if "this string" exists inside you then use this CSS  
+// EARL/Earl is third person - story text - white background black text 
+// You/you is first person - self text - black background white text 
 		$(".container:contains('EARL')").parent().css("background","#f6f6f6");
 		$(".container:contains('Earl')").parent().css("background","#f6f6f6");
 		$(".container:contains('You')").parent().css("background","#1c1c1c");
 		$(".container:contains('you')").parent().css("background","#1c1c1c");
 
-
-
-		var viewportwidth = $(window).width();
-		var viewportHeight = $(window).height();
-
-// everytime an a tag is clicked we have context to THIS  / 
-// anytime any button is clicked do this - 2 sent instead of 40 
+// In the EVENT of click an <a> tag do THIS  / 
 		$("a").click(function(e){
-			
+			// Clicked anchors will not take the browser to a new URL. 
+			// We can use prevent defualt to determine if this 
+			// method has been called by an event handler 
+			// that was triggered by this event.
 			e.preventDefault();
-			// var paragraph = $(this).parent();
-			// var article = paragraph.parent().parent().parent();
-			// var container = article.parent();
-			
-			// every time a is clicked make sure that the parents 
-			// / link - paragraph - article - container - what 
-			// the href of this link that I have just clicked 
+			// Identify the href of the link clicked (eg - five.html) 
+			var viewportWidth = $(window).width();
+			var viewportHeight = $(window).height();
 			var href = $(this).attr('href');
-			var pageHeight = 10000;
+			// var pageHeight = 10000;
 			var clicked = false;
-// Variable "href" what is the href that was clicked; that this link will be directed to //
-//If an a tag is clicked insert an Iframe after the tag that was clicked  =
- // you need to give an iframe a width and a height / compulsary /
- // building up an html string to put into my html document 
- // inject valid html - make a sentence using the iframe tag
- // I want to know where this link is going to and then write the html 
+			// Building HTML string (Check if its not clicked)
+			// If an a tag is clicked insert an Iframe after 
+			// the tag that was clicked  
+			// Identify the link and then write valid HTML 
+			// to insert it in the document  
 			if (clicked==false) {
-				$(this).after("<iframe class='framer' height=' "+pageHeight+"' width='"+viewportwidth+" ' src='"+href+" ' frameBorder='0'>");
+				$(this).after("<iframe class='framer' height=' "+viewportHeight+"' width='"+viewportWidth+" ' src='"+href+" ' frameBorder='0'>");
 				clicked = true;
-				// every link does the iframe thing 
-
+				// Every Link creates a new iframe 
+				// (height and width required)
 			} else {
-
 			}
 						
 });
