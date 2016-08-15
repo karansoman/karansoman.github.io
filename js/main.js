@@ -59,8 +59,9 @@
 				clicked = true;
 				// Every Link creates a new iframe 
 				// (height and width required)
-			} else {
-			}
+			} 
+			// else {
+			// }
 						
 });
 
